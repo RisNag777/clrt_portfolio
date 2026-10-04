@@ -4,6 +4,8 @@ export interface LearningOutcome {
   id: string
   number: number
   text: string
+  imagePath?: string
+  imageAlt?: string
 }
 
 export interface Artifact {
@@ -36,7 +38,7 @@ export const course = {
   shortTitle: 'CLRT-I',
   term: 'FQ26',
   intro:
-    'A living record of my learning as I develop as a culturally and linguistically responsive educator—grounded in reflection, community, and justice-oriented practice.',
+    'A record of my learning as I develop as a culturally and linguistically responsive educator who is grounded in reflection, community, and justice-oriented practice.',
 }
 
 export const learningOutcomes: LearningOutcome[] = [
@@ -44,31 +46,49 @@ export const learningOutcomes: LearningOutcome[] = [
     id: 'clo-1',
     number: 1,
     text: 'Explain the roles of culture, language, and social context in how students learn.',
+    imagePath: '/images/culture-dimensions.png',
+    imageAlt:
+      'An overhead chalkboard diagram of Culture connected to Ethnicity, Nation, Diversity, Tradition, Belief, and People, with diverse hands collaborating around the board.',
   },
   {
     id: 'clo-2',
     number: 2,
     text: 'Define and explain teaching culturally and linguistically diverse students as political, multidimensional, and connecting to families and communities, and building community.',
+    imagePath: '/images/school-community.png',
+    imageAlt:
+      'A colorful illustration of a diverse school community gathered in front of a red brick school building in a city, with families, students, a school bus, and a skyline in the background.',
   },
   {
     id: 'clo-3',
     number: 3,
     text: 'Reflect on and deepen understanding of yourself as a sociocultural being, engaged in the process of becoming a <em>transformational agent for justice</em> who aims to help change the <em>status quo</em> for the common good in education.',
+    imagePath: '/images/global-learning-network.png',
+    imageAlt:
+      'A stylized illustration of diverse people reading, teaching, and connecting through a network of lines linking books, technology, and global symbols.',
   },
   {
     id: 'clo-4',
     number: 4,
     text: 'Explain and synthesize foundational principles of culturally sustaining and linguistically responsive pedagogy, and use them to analyze the teaching and learning of culturally and linguistically diverse students.',
+    imagePath: '/images/representation-in-curriculum.png',
+    imageAlt:
+      'A cartoon of diverse children looking skeptically at a large red book titled The Big Book of White Men, with a speech bubble asking How are we supposed to relate to this?',
   },
   {
     id: 'clo-5',
     number: 5,
     text: 'Explain basic principles of second language learning and how they are addressed in linguistically responsive teaching.',
+    imagePath: '/images/itchy-feet-language-learning.png',
+    imageAlt:
+      "A comic strip titled Itchy Feet showing the progression of language learning from an easy Beginner's Hill to a steep Conversation Ridge, ending with a massive, intimidating Mt. Fluency looming in the background. © 2013 Malachi Rempen, www.itchyfeetcomic.com.",
   },
   {
     id: 'clo-6',
     number: 6,
     text: 'Explain language variation, language register, linguistic repertoires, relationships between language, culture, and learning, and how all of these concepts are central to the teaching and learning of culturally and linguistically diverse students.',
+    imagePath: '/images/soda-pop-coke-debate.png',
+    imageAlt:
+      'A four-panel comic strip depicting a debate over the regional terms Soda, Pop, and Coke at the Inter-Regional Generic Soft-Drink Name Debate. © 2012 internet-webcomic.com.',
   },
 ]
 

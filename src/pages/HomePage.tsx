@@ -48,16 +48,40 @@ export function HomePage() {
             Six learning outcomes guide the work in this course.
           </p>
           <ol className="outcome-list">
-            {learningOutcomes.map((outcome) => (
-              <li key={outcome.id} className="outcome-item" data-reveal>
-                <span className="outcome-item__num" aria-hidden="true">
-                  {String(outcome.number)}
-                </span>
-                <p className="outcome-item__text">
-                  <RichText text={outcome.text} />
-                </p>
-              </li>
-            ))}
+            {learningOutcomes.map((outcome) => {
+              const imageSide =
+                outcome.imagePath && (outcome.number % 2 === 0 ? 'left' : 'right')
+
+              return (
+                <li
+                  key={outcome.id}
+                  className={[
+                    'outcome-item',
+                    outcome.imagePath ? 'outcome-item--with-image' : '',
+                    imageSide ? `outcome-item--image-${imageSide}` : '',
+                  ]
+                    .filter(Boolean)
+                    .join(' ')}
+                  data-reveal
+                >
+                  <div className="outcome-item__copy">
+                    <span className="outcome-item__num" aria-hidden="true">
+                      {String(outcome.number)}
+                    </span>
+                    <p className="outcome-item__text">
+                      <RichText text={outcome.text} />
+                    </p>
+                  </div>
+                  {outcome.imagePath ? (
+                    <img
+                      className="outcome-item__image"
+                      src={outcome.imagePath}
+                      alt={outcome.imageAlt ?? ''}
+                    />
+                  ) : null}
+                </li>
+              )
+            })}
           </ol>
         </div>
       </section>

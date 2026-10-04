@@ -389,9 +389,6 @@ p:last-child {
 }
 
 .outcome-item {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1rem 1.25rem;
   padding: 1.1rem 0;
   border-top: 1px solid var(--line);
   opacity: 0;
@@ -410,6 +407,60 @@ p:last-child {
   border-bottom: 1px solid var(--line);
 }
 
+.outcome-item__copy {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem 1.25rem;
+  min-width: 0;
+  align-items: start;
+}
+
+.outcome-item--with-image {
+  display: grid;
+  gap: clamp(1rem, 3vw, 1.75rem);
+  align-items: center;
+}
+
+.outcome-item--image-left {
+  grid-template-columns: minmax(180px, 320px) minmax(0, 1fr);
+}
+
+.outcome-item--image-left .outcome-item__image {
+  order: 1;
+}
+
+.outcome-item--image-left .outcome-item__copy {
+  order: 2;
+  justify-content: end;
+  margin-left: auto;
+  width: 100%;
+  max-width: 70ch;
+}
+
+.outcome-item--image-left .outcome-item__text {
+  text-align: right;
+  max-width: none;
+}
+
+.outcome-item--image-right {
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 320px);
+}
+
+.outcome-item--image-right .outcome-item__copy {
+  order: 1;
+  width: 100%;
+  max-width: 70ch;
+}
+
+.outcome-item--image-right .outcome-item__image {
+  order: 2;
+}
+
+.outcome-item--image-right .outcome-item__text {
+  text-align: left;
+  max-width: none;
+}
+
 .outcome-item__num {
   font-family: var(--font-display);
   font-size: 1.5rem;
@@ -423,6 +474,15 @@ p:last-child {
   margin: 0;
   color: var(--ink-soft);
   max-width: 70ch;
+}
+
+.outcome-item__image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
 }
 
 /* Artifact lists */
@@ -641,6 +701,32 @@ p:last-child {
   .hero__image {
     max-width: 240px;
     justify-self: start;
+  }
+
+  .outcome-item--image-left,
+  .outcome-item--image-right {
+    grid-template-columns: 1fr;
+  }
+
+  .outcome-item--image-left .outcome-item__copy,
+  .outcome-item--image-right .outcome-item__copy {
+    order: 2;
+    margin-left: 0;
+    max-width: none;
+  }
+
+  .outcome-item--image-left .outcome-item__image,
+  .outcome-item--image-right .outcome-item__image {
+    order: 1;
+  }
+
+  .outcome-item--image-left .outcome-item__text,
+  .outcome-item--image-right .outcome-item__text {
+    text-align: left;
+  }
+
+  .outcome-item__image {
+    max-width: 280px;
   }
 }
 
