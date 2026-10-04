@@ -265,6 +265,86 @@ export const gradeJustification: GradeJustification = {
   isPlaceholder: true,
 }
 
+export interface RubricCriterion {
+  category: string
+  details: string[]
+}
+
+export interface RubricLevel {
+  grade: string
+  criteria: RubricCriterion[]
+}
+
+export const courseRubric: RubricLevel[] = [
+  {
+    grade: 'A',
+    criteria: [
+      {
+        category: 'Attendance/Engagement',
+        details: [
+          'Attends all classes except in the case of extreme health or family emergencies. Communicates clearly about absences and took responsibility by making up any missed work.',
+          'Contributes actively, productively and respectfully to the learning community, including being timely, present, engaged, and prepared.',
+          'Makes consistently thoughtful and substantive contributions to small and large group discussions in class rooted in principles of culturally and linguistically responsive teaching and learning.',
+        ],
+      },
+      {
+        category: 'Quality/Learning',
+        details: [
+          'Demonstrates a strong and deep understanding of all concepts related to the teaching and learning of culturally and linguistically diverse (CLD) students through discussions, in-class activities, and written assignments.',
+          'Successfully substantiates claims and understandings of CLD student learning and teaching rooted in research and principles of culturally and linguistically responsive teaching.',
+          'Shows consistent evidence of growth, applying feedback to strengthen work.',
+          'Brings a student- and justice-oriented stance, creativity and insight into the teaching and learning of CLD students to discussions, in-class activities, and written assignments.',
+          'Completes all assignments with thoughtfulness and care.',
+        ],
+      },
+    ],
+  },
+  {
+    grade: 'B',
+    criteria: [
+      {
+        category: 'Attendance/Engagement',
+        details: [
+          'Attended 4/6 (or 80% of) classes, took initiative to schedule a meeting with the instructor about your absence, and made-up work.',
+          'Contributes productively to the learning community, with some issues being timely, present, engaged, respectful, and/or prepared.',
+          'Makes contributions to small and large group discussions in class mostly rooted in principles of culturally and linguistically responsive teaching and learning.',
+        ],
+      },
+      {
+        category: 'Quality/Learning',
+        details: [
+          'Demonstrates an adequate, yet inconsistent level of understanding of concepts related to the teaching and learning of culturally and linguistically diverse (CLD) students through discussions, in-class activities, and written assignments.',
+          'Mostly supports claims and understandings of CLD student learning and teaching with research and principles of culturally and linguistically responsive teaching. These supported claims and understandings may not show a full or deep understanding of some of research or principles covered in the course.',
+          'Shows evidence of growth, but inconsistently applies feedback to work.',
+          'Shows some evidence of bringing a justice-oriented stance, creativity and insight into the teaching and learning of CLD students to discussions, in-class activities, and written assignments.',
+          'Completes most assignments with thoughtfulness and/or care.',
+        ],
+      },
+    ],
+  },
+  {
+    grade: 'Not ready to move forward',
+    criteria: [
+      {
+        category: 'Attendance/Engagement',
+        details: [
+          'Attended 3/5 or less classes (or 60% of) classes, took initiative to schedule a meeting with the instructor about your absence, and made-up work.',
+          'Does not contribute productively to the learning community, having issues with timeliness, presence, engagement, respect, and preparedness.',
+          'Makes little to no contributions to small and large group discussions in class. Contributions are often not related to principles of culturally and linguistically responsive teaching.',
+        ],
+      },
+      {
+        category: 'Quality/Learning',
+        details: [
+          'Shows an unsatisfactory level of understanding of concepts related to the teaching and learning of culturally and linguistically diverse (CLD) students through discussions, in-class activities, and written assignments.',
+          'Unsuccessfully defends claims and understandings of CLD student learning and teaching with little to no reference to research and principles of culturally and linguistically responsive teaching.',
+          'Shows no evidence of growth, is not receptive to, nor applies feedback to strengthen work.',
+        ],
+      },
+    ],
+  },
+]
+
 export function getOutcomeById(id: string): LearningOutcome | undefined {
   return learningOutcomes.find((o) => o.id === id)
 }
