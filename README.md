@@ -36,12 +36,12 @@ Replace every `[Replace …]` string before submitting.
 
 To add a 7th artifact, append another object to the `artifacts` array.
 
-### Grade justification
+### Grade reflection
 
-Edit `gradeJustification` in `portfolio.ts`:
+Edit `gradeReflection` in `portfolio.ts`:
 
 - `proposedGrade`
-- `rationale` — one paragraph addressing all course rubric criteria
+- `reflection` — one paragraph addressing all course rubric criteria
 - set `isPlaceholder: false` when your final text is ready
 
 ## Deploy

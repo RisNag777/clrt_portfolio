@@ -25,9 +25,9 @@ export interface Artifact {
   }
 }
 
-export interface GradeJustification {
+export interface GradeReflection {
   proposedGrade: string
-  rationale: string
+  reflection: string
   isPlaceholder: boolean
 }
 
@@ -258,11 +258,11 @@ export const artifacts: Artifact[] = [
   }),
 ]
 
-export const gradeJustification: GradeJustification = {
+export const gradeReflection: GradeReflection = {
   proposedGrade: 'A',
-  rationale:
-    '[Replace this paragraph with your grade justification.] Write one paragraph proposing your grade for the course and justifying it against all descriptive criteria in the course rubric. You may reference this CLRT-I Portfolio as part of your rationale, but not as the only justification. Address the full set of rubric criteria with concrete evidence from your work across the quarter.',
-  isPlaceholder: true,
+  reflection:
+    'I believe that my work in this course is deserving of an A grade. I have attended all of the classes, and have always come prepared by completing the readings/podcasts and having extensive notes to facilitate class discussions. I was extremely active in small group discussions, actively contributed to both Socratic Seminars, and believe that I contributed thoughtfully to large group discussions as well. My work demonstrates a strong and deep understanding of all concepts related to the teaching and learning of CLD students. Based on Dr. Von Esch\'s feedback for the Mid-Course Assessment, I "have a solid grasp of culturally responsive instruction, the concepts we have been learning in class, and importantly, how to use those concepts to recognize and analyze culturally responsive teaching and learning." My portfolio shows that I substantiated claims and understandings of CLD student learning and teaching rooted in research and principles of culturally and linguistically responsive teaching. I always brought a student and justice-oriented stance to all discussions and in-class activities. I completed all assignments and I have incorporated feedback to strengthen my profile as a CLD educator.',
+  isPlaceholder: false,
 }
 
 export interface RubricCriterion {

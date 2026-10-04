@@ -26,7 +26,7 @@ export function HomePage() {
                 View portfolio artifacts
               </Link>
               <Link className="btn btn--ghost" to="/grade">
-                Grade justification
+                Grade reflection
               </Link>
             </div>
           </div>

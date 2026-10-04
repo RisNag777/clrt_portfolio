@@ -1,4 +1,4 @@
-import { course, courseRubric, gradeJustification } from '../data/portfolio'
+import { course, courseRubric, gradeReflection } from '../data/portfolio'
 
 export function GradePage() {
   return (
@@ -7,7 +7,7 @@ export function GradePage() {
         <h1 className="page-header__title">Course rubric & grade</h1>
         <p className="page-header__lede">
           The grading criteria for {course.courseCode} {course.shortTitle} ({course.term}), followed
-          by my proposed grade and a rationale that addresses the categories below.
+          by my proposed grade and a reflection that addresses the categories below.
         </p>
       </header>
 
@@ -49,19 +49,19 @@ export function GradePage() {
         </div>
       </section>
 
-      <section className="justification-section" aria-labelledby="justification-heading">
-        <h2 className="section__title" id="justification-heading">
-          Grade justification
+      <section className="reflection-section" aria-labelledby="reflection-heading">
+        <h2 className="section__title" id="reflection-heading">
+          Grade reflection
         </h2>
         <div className="grade-panel">
-          {gradeJustification.isPlaceholder ? (
+          {gradeReflection.isPlaceholder ? (
             <span className="placeholder-note">Placeholder — replace before submission</span>
           ) : null}
           <p className="section__label" style={{ marginBottom: '0.35rem' }}>
             Proposed grade
           </p>
-          <p className="grade-panel__mark">{gradeJustification.proposedGrade}</p>
-          <p>{gradeJustification.rationale}</p>
+          <p className="grade-panel__mark">{gradeReflection.proposedGrade}</p>
+          <p>{gradeReflection.reflection}</p>
         </div>
       </section>
     </div>

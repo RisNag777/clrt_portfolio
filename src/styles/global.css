@@ -658,7 +658,7 @@ p:last-child {
   border-radius: var(--radius);
   padding: clamp(1.5rem, 4vw, 2.25rem);
   box-shadow: var(--shadow);
-  max-width: 70ch;
+  max-width: none;
 }
 
 .grade-panel__mark {
@@ -675,7 +675,7 @@ p:last-child {
 }
 
 .rubric-section .section__title,
-.justification-section .section__title {
+.reflection-section .section__title {
   max-width: none;
   margin-bottom: 1.25rem;
 }
