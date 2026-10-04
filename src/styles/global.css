@@ -279,13 +279,24 @@ p:last-child {
   animation: rise-in 0.8s ease forwards 0.1s;
 }
 
+.hero__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(220px, 0.85fr);
+  gap: clamp(1.5rem, 5vw, 3.5rem);
+  align-items: center;
+}
+
+.hero__copy {
+  min-width: 0;
+}
+
 .hero__name {
   font-size: clamp(3rem, 9vw, 5.6rem);
   font-weight: 700;
   line-height: 0.98;
   margin: 0 0 0.35em;
   color: var(--ink);
-  max-width: 12ch;
+  max-width: 18ch;
   opacity: 0;
   animation: rise-in 0.9s ease forwards 0.22s;
 }
@@ -301,12 +312,26 @@ p:last-child {
   animation: rise-in 0.9s ease forwards 0.34s;
 }
 
+.hero__intro {
+  opacity: 0;
+  animation: rise-in 0.9s ease forwards 0.46s;
+}
+
 .hero__lede {
   font-size: 1.15rem;
   color: var(--muted);
-  max-width: 42ch;
+  max-width: 80ch;
+  margin: 0;
+}
+
+.hero__image {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  object-fit: contain;
+  justify-self: end;
   opacity: 0;
-  animation: rise-in 0.9s ease forwards 0.46s;
+  animation: rise-in 0.9s ease forwards 0.4s;
 }
 
 .hero .cta-row {
@@ -607,6 +632,15 @@ p:last-child {
 
   .hero__name {
     max-width: none;
+  }
+
+  .hero__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__image {
+    max-width: 240px;
+    justify-self: start;
   }
 }
 

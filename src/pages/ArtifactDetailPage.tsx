@@ -1,4 +1,5 @@
 import { Link, Navigate, useParams } from 'react-router-dom'
+import { RichText } from '../components/RichText'
 import { getArtifactById, outcomesForArtifact } from '../data/portfolio'
 
 function isImagePath(path: string) {
@@ -70,7 +71,7 @@ export function ArtifactDetailPage() {
             <ul>
               {outcomes.map((o) => (
                 <li key={o.id}>
-                  <strong>CLO {o.number}:</strong> {o.text}
+                  <strong>CLO {o.number}:</strong> <RichText text={o.text} />
                 </li>
               ))}
             </ul>

@@ -53,7 +53,7 @@ export const learningOutcomes: LearningOutcome[] = [
   {
     id: 'clo-3',
     number: 3,
-    text: 'Reflect on and deepen understanding of yourself as a sociocultural being, engaged in the process of becoming a transformational agent for justice who aims to help change the status quo for the common good in education.',
+    text: 'Reflect on and deepen understanding of yourself as a sociocultural being, engaged in the process of becoming a <em>transformational agent for justice</em> who aims to help change the <em>status quo</em> for the common good in education.',
   },
   {
     id: 'clo-4',

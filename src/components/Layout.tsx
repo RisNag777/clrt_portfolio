@@ -34,7 +34,7 @@ export function Layout() {
       <footer className="site-footer">
         <div className="container">
           <span>
-            {course.studentName} — {course.courseCode} {course.shortTitle}, {course.term}
+            {course.studentName} - {course.courseCode} {course.shortTitle}, {course.term}
           </span>
           <span>Culturally and Linguistically Responsive Teaching-I</span>
         </div>
