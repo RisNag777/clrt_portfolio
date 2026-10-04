@@ -92,139 +92,170 @@ export const learningOutcomes: LearningOutcome[] = [
   },
 ]
 
+function plainOutcomeText(text: string) {
+  return text.replace(/<\/?em>/g, '')
+}
+
+function placeholderArtifact(input: {
+  id: string
+  title: string
+  type: ArtifactType
+  outcomeIds: string[]
+  summary?: string
+}): Artifact {
+  const outcomes = input.outcomeIds
+    .map((id) => learningOutcomes.find((o) => o.id === id))
+    .filter((o): o is LearningOutcome => Boolean(o))
+
+  const cloList = outcomes.map((o) => `CLO ${o.number}`).join(' and ')
+  const outcomeStatements = outcomes
+    .map((o) => `CLO ${o.number}: ${plainOutcomeText(o.text)}`)
+    .join(' ')
+
+  return {
+    id: input.id,
+    title: input.title,
+    type: input.type,
+    outcomeIds: input.outcomeIds,
+    summary:
+      input.summary ??
+      `Placeholder artifact for “${input.title}.” Replace this summary and add your file and caption before submitting.`,
+    filePath: '',
+    fileLabel: 'Add your artifact file to /public/artifacts/',
+    caption: {
+      outcomeAddressed: `This artifact addresses ${cloList}. ${outcomeStatements}`,
+      whatILearned: `[Replace this paragraph] Describe what you learned through “${input.title}” and why this is important in the teaching and learning of culturally and linguistically diverse students.`,
+      citations: [
+        '[Replace] Author, A. (Year). Title. Source.',
+        '[Replace] Course reading, video, or class activity title.',
+      ],
+      whatItShows: `[Replace this paragraph] Explain what this artifact shows about your learning—e.g., a powerful moment of insight, growth in knowledge/skill/disposition, or a challenge that stretched your thinking.`,
+    },
+  }
+}
+
 export const artifacts: Artifact[] = [
-  {
-    id: 'culture-language-context',
-    title: 'Culture, Language & Social Context in Learning',
+  placeholderArtifact({
+    id: 'starting-in-spanish',
+    title: 'Starting in Spanish activity',
+    type: 'activity',
+    outcomeIds: ['clo-1', 'clo-5'],
+  }),
+  placeholderArtifact({
+    id: 'nice-white-parents',
+    title: 'Nice White Parents',
+    type: 'discussion',
+    outcomeIds: ['clo-2', 'clo-3'],
+  }),
+  placeholderArtifact({
+    id: 'nieto-principles-of-learning',
+    title: "Nieto's Principles of Learning",
+    type: 'assignment',
+    outcomeIds: ['clo-1', 'clo-4'],
+  }),
+  placeholderArtifact({
+    id: 'diversity-toss',
+    title: 'Diversity Toss',
+    type: 'activity',
+    outcomeIds: ['clo-1', 'clo-2'],
+  }),
+  placeholderArtifact({
+    id: 'socratic-seminar-culture',
+    title: 'Socratic Seminar about culture',
+    type: 'discussion',
+    outcomeIds: ['clo-1', 'clo-3'],
+  }),
+  placeholderArtifact({
+    id: 'monolingual-white-children-discourse',
+    title:
+      'Talking about Monolingual white children the way we talk about low-income children of color',
+    type: 'discussion',
+    outcomeIds: ['clo-2', 'clo-3'],
+  }),
+  placeholderArtifact({
+    id: 'bronfenbrenner-model',
+    title: "Bronfenbrenner's Model",
     type: 'assignment',
     outcomeIds: ['clo-1'],
-    summary:
-      'Placeholder artifact exploring how culture, language, and social context shape student learning.',
-    filePath: '',
-    fileLabel: 'Add your artifact file to /public/artifacts/',
-    caption: {
-      outcomeAddressed:
-        'This artifact addresses Course Learning Outcome 1: Explain the roles of culture, language, and social context in how students learn.',
-      whatILearned:
-        '[Replace this paragraph] Describe what you learned about culture, language, and social context—and why this matters for teaching and learning with culturally and linguistically diverse students.',
-      citations: [
-        '[Replace] Author, A. (Year). Title. Source.',
-        '[Replace] Course reading or video title.',
-      ],
-      whatItShows:
-        '[Replace this paragraph] Explain what this artifact shows about your learning—e.g., a powerful moment of insight, growth in knowledge/skill/disposition, or a challenge that stretched your thinking.',
-    },
-  },
-  {
-    id: 'teaching-as-political',
-    title: 'Teaching as Political & Community-Connected Work',
-    type: 'discussion',
-    outcomeIds: ['clo-2'],
-    summary:
-      'Placeholder artifact examining teaching CLD students as political, multidimensional, and rooted in families and communities.',
-    filePath: '',
-    fileLabel: 'Add your artifact file to /public/artifacts/',
-    caption: {
-      outcomeAddressed:
-        'This artifact addresses Course Learning Outcome 2: Define and explain teaching culturally and linguistically diverse students as political, multidimensional, and connecting to families and communities, and building community.',
-      whatILearned:
-        '[Replace this paragraph] Describe what you learned about the political and multidimensional nature of teaching CLD students, and why connecting to families and communities matters.',
-      citations: [
-        '[Replace] Author, A. (Year). Title. Source.',
-        '[Replace] Course reading or video title.',
-      ],
-      whatItShows:
-        '[Replace this paragraph] Explain what this artifact shows about your learning—growth in disposition toward community, a challenge to prior assumptions, or a powerful shift in how you see the work of teaching.',
-    },
-  },
-  {
-    id: 'sociocultural-self',
-    title: 'Myself as a Sociocultural Being',
-    type: 'reflection',
-    outcomeIds: ['clo-3'],
-    summary:
-      'Placeholder reflection on identity, positionality, and becoming a transformational agent for justice in education.',
-    filePath: '',
-    fileLabel: 'Add your artifact file to /public/artifacts/',
-    caption: {
-      outcomeAddressed:
-        'This artifact addresses Course Learning Outcome 3: Reflect on and deepen understanding of yourself as a sociocultural being, engaged in the process of becoming a transformational agent for justice who aims to help change the status quo for the common good in education.',
-      whatILearned:
-        '[Replace this paragraph] Describe what you learned about yourself as a sociocultural being and how this shapes your path toward justice-oriented educational practice.',
-      citations: [
-        '[Replace] Author, A. (Year). Title. Source.',
-        '[Replace] Course reading or video title.',
-      ],
-      whatItShows:
-        '[Replace this paragraph] Explain what this artifact shows about your learning—especially points of powerful self-reflection, dispositional growth, or moments that challenged you.',
-    },
-  },
-  {
-    id: 'culturally-sustaining-pedagogy',
-    title: 'Culturally Sustaining & Linguistically Responsive Pedagogy',
+  }),
+  placeholderArtifact({
+    id: 'yosso-communities-of-cultural-wealth',
+    title: "Yosso's Communities of Cultural Wealth (Kamehameha Schools)",
+    type: 'assignment',
+    outcomeIds: ['clo-2', 'clo-4'],
+  }),
+  placeholderArtifact({
+    id: 'culturally-responsive-pedagogy',
+    title: 'Culturally Responsive Pedagogy',
     type: 'assignment',
     outcomeIds: ['clo-4'],
-    summary:
-      'Placeholder artifact synthesizing principles of culturally sustaining and linguistically responsive pedagogy.',
-    filePath: '',
-    fileLabel: 'Add your artifact file to /public/artifacts/',
-    caption: {
-      outcomeAddressed:
-        'This artifact addresses Course Learning Outcome 4: Explain and synthesize foundational principles of culturally sustaining and linguistically responsive pedagogy, and use them to analyze the teaching and learning of culturally and linguistically diverse students.',
-      whatILearned:
-        '[Replace this paragraph] Describe the foundational principles you synthesized and how you used them to analyze teaching and learning with CLD students.',
-      citations: [
-        '[Replace] Author, A. (Year). Title. Source.',
-        '[Replace] Course reading or video title.',
-      ],
-      whatItShows:
-        '[Replace this paragraph] Explain what this artifact shows about your learning—growth in analytical skill, deeper pedagogical knowledge, or a challenge in applying theory to practice.',
-    },
-  },
-  {
-    id: 'second-language-learning',
-    title: 'Principles of Second Language Learning',
+  }),
+  placeholderArtifact({
+    id: 'culturally-relevant-pedagogy',
+    title: 'Culturally Relevant Pedagogy',
+    type: 'assignment',
+    outcomeIds: ['clo-4'],
+  }),
+  placeholderArtifact({
+    id: 'culturally-responsive-caring',
+    title: 'Culturally Responsive Caring (Every kid needs a champion)',
+    type: 'reflection',
+    outcomeIds: ['clo-2', 'clo-4'],
+  }),
+  placeholderArtifact({
+    id: 'child-of-immigrants',
+    title: 'Child of immigrants',
+    type: 'reflection',
+    outcomeIds: ['clo-1', 'clo-3'],
+  }),
+  placeholderArtifact({
+    id: 'socratic-seminar-hidden-brain',
+    title: 'Socratic Seminar about Hidden Brain Podcast',
+    type: 'discussion',
+    outcomeIds: ['clo-1', 'clo-3'],
+  }),
+  placeholderArtifact({
+    id: 'fact-or-fallacy',
+    title: 'Fact or Fallacy',
+    type: 'activity',
+    outcomeIds: ['clo-5', 'clo-6'],
+  }),
+  placeholderArtifact({
+    id: 'second-language-acquisition',
+    title: 'Second Language Acquisition',
+    type: 'assignment',
+    outcomeIds: ['clo-5'],
+  }),
+  placeholderArtifact({
+    id: 'translanguaging',
+    title: 'Translanguaging',
+    type: 'assignment',
+    outcomeIds: ['clo-5', 'clo-6'],
+  }),
+  placeholderArtifact({
+    id: 'dialects-are-languages',
+    title: 'Dialects are Languages',
+    type: 'discussion',
+    outcomeIds: ['clo-6'],
+  }),
+  placeholderArtifact({
+    id: 'scaffolding-language-learning',
+    title: 'Scaffolding language Learning',
     type: 'activity',
     outcomeIds: ['clo-5'],
-    summary:
-      'Placeholder artifact on basic principles of second language learning in linguistically responsive teaching.',
-    filePath: '',
-    fileLabel: 'Add your artifact file to /public/artifacts/',
-    caption: {
-      outcomeAddressed:
-        'This artifact addresses Course Learning Outcome 5: Explain basic principles of second language learning and how they are addressed in linguistically responsive teaching.',
-      whatILearned:
-        '[Replace this paragraph] Describe what you learned about second language learning principles and how linguistically responsive teaching addresses them—and why this matters for CLD students.',
-      citations: [
-        '[Replace] Author, A. (Year). Title. Source.',
-        '[Replace] Course reading or video title.',
-      ],
-      whatItShows:
-        '[Replace this paragraph] Explain what this artifact shows about your learning—growth in knowledge of L2 principles, skill in designing responsive supports, or a concept that challenged you.',
-    },
-  },
-  {
-    id: 'language-variation-repertoires',
-    title: 'Language Variation, Register & Linguistic Repertoires',
+  }),
+  placeholderArtifact({
+    id: 'key-principles-bilingual-students',
+    title: 'Key Principles for instructing bilingual students',
     type: 'assignment',
-    outcomeIds: ['clo-6'],
-    summary:
-      'Placeholder artifact on language variation, register, repertoires, and their centrality to teaching CLD students.',
-    filePath: '',
-    fileLabel: 'Add your artifact file to /public/artifacts/',
-    caption: {
-      outcomeAddressed:
-        'This artifact addresses Course Learning Outcome 6: Explain language variation, language register, linguistic repertoires, relationships between language, culture, and learning, and how all of these concepts are central to the teaching and learning of culturally and linguistically diverse students.',
-      whatILearned:
-        '[Replace this paragraph] Describe what you learned about language variation, register, and linguistic repertoires—and why these concepts are central to teaching and learning with CLD students.',
-      citations: [
-        '[Replace] Author, A. (Year). Title. Source.',
-        '[Replace] Course reading or video title.',
-      ],
-      whatItShows:
-        '[Replace this paragraph] Explain what this artifact shows about your learning—a powerful shift in how you view language, growth in knowledge, or a challenge that deepened your understanding.',
-    },
-  },
+    outcomeIds: ['clo-5'],
+  }),
+  placeholderArtifact({
+    id: 'loteria-cards',
+    title: 'Loteria Cards',
+    type: 'activity',
+    outcomeIds: ['clo-1', 'clo-4'],
+  }),
 ]
 
 export const gradeJustification: GradeJustification = {
