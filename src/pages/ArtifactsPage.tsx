@@ -1,9 +1,9 @@
-import { Link } from 'react-router-dom'
-import { artifacts, outcomesForArtifact } from '../data/portfolio'
+import { ArtifactView } from '../components/ArtifactView'
+import { artifacts } from '../data/portfolio'
 
 export function ArtifactsPage() {
   return (
-    <div className="container">
+    <div className="container" style={{ paddingBottom: '3.5rem' }}>
       <header className="page-header">
         <h1 className="page-header__title">Portfolio artifacts</h1>
         <p className="page-header__lede">
@@ -13,27 +13,11 @@ export function ArtifactsPage() {
         </p>
       </header>
 
-      <ul className="artifact-list" style={{ paddingBottom: '3rem' }}>
-        {artifacts.map((artifact) => {
-          const outcomes = outcomesForArtifact(artifact)
-          return (
-            <li key={artifact.id}>
-              <Link className="artifact-row" to={`/artifacts/${artifact.id}`}>
-                <div className="artifact-row__meta">
-                  <span className="tag">{artifact.type}</span>
-                  {outcomes.map((o) => (
-                    <span key={o.id} className="tag tag--outcome">
-                      CLO {o.number}
-                    </span>
-                  ))}
-                </div>
-                <h2 className="artifact-row__title">{artifact.title}</h2>
-                <p className="artifact-row__summary">{artifact.summary}</p>
-              </Link>
-            </li>
-          )
-        })}
-      </ul>
+      <div className="artifact-entries">
+        {artifacts.map((artifact) => (
+          <ArtifactView key={artifact.id} artifact={artifact} />
+        ))}
+      </div>
     </div>
   )
 }
