@@ -151,7 +151,7 @@ export const artifacts: Artifact[] = [
     title: 'Los marcos de referencia/Frames of Reference',
     subtitle: 'Starting in Spanish Activity',
     type: 'activity',
-    outcomeIds: ['clo-1', 'clo-5'],
+    outcomeIds: ['clo-1'],
     images: [
       {
         src: '/artifacts/frames-of-reference-4.png',
@@ -172,23 +172,11 @@ export const artifacts: Artifact[] = [
     ],
   }),
   placeholderArtifact({
-    id: 'monolingual-white-children-discourse',
-    title: 'Flores (2015) Monolingual White Children',
-    type: 'discussion',
-    outcomeIds: ['clo-2', 'clo-3'],
-    images: [
-      {
-        src: '/artifacts/flores-2015-monolingual-white-children.png',
-        alt: 'Essay by Dr. Nelson Flores that describes monolingual White children using the same deficit language often applied to low-income children of color, including the Multilingual Talks project.',
-      },
-    ],
-  }),
-  placeholderArtifact({
     id: 'yosso-communities-of-cultural-wealth',
     title: 'Social Capital Lotería Card',
     subtitle: "Yosso's Communities of Cultural Wealth",
     type: 'assignment',
-    outcomeIds: ['clo-2', 'clo-4'],
+    outcomeIds: ['clo-2'],
     stackImages: true,
     images: [
       {
@@ -198,6 +186,18 @@ export const artifacts: Artifact[] = [
       {
         src: '/artifacts/social-capital-notes.png',
         alt: 'Handwritten notes titled Social Capital describing Yosso’s cultural capital and a personal example of community support in Bloomington, Indiana.',
+      },
+    ],
+  }),
+  placeholderArtifact({
+    id: 'monolingual-white-children-discourse',
+    title: 'Flores (2015) Monolingual White Children',
+    type: 'discussion',
+    outcomeIds: ['clo-3'],
+    images: [
+      {
+        src: '/artifacts/flores-2015-monolingual-white-children.png',
+        alt: 'Essay by Dr. Nelson Flores that describes monolingual White children using the same deficit language often applied to low-income children of color, including the Multilingual Talks project.',
       },
     ],
   }),
@@ -227,19 +227,6 @@ export const artifacts: Artifact[] = [
     ],
   }),
   placeholderArtifact({
-    id: 'dialects-are-languages',
-    title: 'Dr. Jamila Lyiscott: 3 Ways to Speak English',
-    subtitle: 'Dialects are Languages',
-    type: 'discussion',
-    outcomeIds: ['clo-6'],
-    images: [
-      {
-        src: '/artifacts/lyiscott-3-ways-to-speak-english.png',
-        alt: 'Still from Jamila Lyiscott’s TEDSalon NY2014 talk, 3 ways to speak English, February 2014.',
-      },
-    ],
-  }),
-  placeholderArtifact({
     id: 'scaffolding-language-learning',
     title: 'Scaffolding Write-and-Pass Activity',
     subtitle: 'Scaffolding Language Learning',
@@ -249,6 +236,19 @@ export const artifacts: Artifact[] = [
       {
         src: '/artifacts/scaffolding-write-and-pass.png',
         alt: 'Handwritten notes numbered 1 through 6 on scaffolding language learning, including multiculturalism, conversational versus academic language, context, student strengths, and English learners.',
+      },
+    ],
+  }),
+  placeholderArtifact({
+    id: 'dialects-are-languages',
+    title: 'Dr. Jamila Lyiscott: 3 Ways to Speak English',
+    subtitle: 'Dialects are Languages',
+    type: 'discussion',
+    outcomeIds: ['clo-6'],
+    images: [
+      {
+        src: '/artifacts/lyiscott-3-ways-to-speak-english.png',
+        alt: 'Still from Jamila Lyiscott’s TEDSalon NY2014 talk, 3 ways to speak English, February 2014.',
       },
     ],
   }),
