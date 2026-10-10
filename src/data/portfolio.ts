@@ -1,4 +1,19 @@
-export type ArtifactType = 'assignment' | 'discussion' | 'activity' | 'reflection'
+export type ArtifactType =
+  | 'assignment'
+  | 'discussion'
+  | 'activity'
+  | 'reflection'
+  | 'reading'
+  | 'in-class-video'
+
+export const artifactTypeLabels: Record<ArtifactType, string> = {
+  assignment: 'Assignment',
+  discussion: 'Discussion',
+  activity: 'Activity',
+  reflection: 'Reflection',
+  reading: 'Reading',
+  'in-class-video': 'In-Class Video',
+}
 
 export interface LearningOutcome {
   id: string
@@ -192,7 +207,7 @@ export const artifacts: Artifact[] = [
   placeholderArtifact({
     id: 'monolingual-white-children-discourse',
     title: 'Flores (2015) Monolingual White Children',
-    type: 'discussion',
+    type: 'reading',
     outcomeIds: ['clo-3'],
     images: [
       {
@@ -205,7 +220,7 @@ export const artifacts: Artifact[] = [
     id: 'culturally-relevant-pedagogy',
     title: 'Culturally Relevant Pedagogy in Mathematics: A Critical Need',
     subtitle: 'Culturally Relevant Pedagogy',
-    type: 'assignment',
+    type: 'in-class-video',
     outcomeIds: ['clo-4'],
     images: [
       {
@@ -243,7 +258,7 @@ export const artifacts: Artifact[] = [
     id: 'dialects-are-languages',
     title: 'Dr. Jamila Lyiscott: 3 Ways to Speak English',
     subtitle: 'Dialects are Languages',
-    type: 'discussion',
+    type: 'in-class-video',
     outcomeIds: ['clo-6'],
     images: [
       {

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { Link } from 'react-router-dom'
-import { artifacts, outcomesForArtifact, type Artifact } from '../data/portfolio'
+import { artifactTypeLabels, artifacts, outcomesForArtifact, type Artifact } from '../data/portfolio'
 import { RichText } from './RichText'
 
 function isImagePath(path: string) {
@@ -91,7 +91,7 @@ export function ArtifactView({
             </Link>
           ) : null}
           <div className="artifact-detail__meta">
-            <span className="tag">{artifact.type}</span>
+            <span className="tag">{artifactTypeLabels[artifact.type]}</span>
             {outcomes.map((outcome) => (
               <span key={outcome.id} className="clo-preview">
                 <button type="button" className="tag tag--outcome clo-preview__trigger">
