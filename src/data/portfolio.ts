@@ -234,9 +234,28 @@ export const artifacts: Artifact[] = [
   }),
   placeholderArtifact({
     id: 'culturally-relevant-pedagogy',
-    title: 'Culturally Relevant Pedagogy',
+    title: 'Culturally Relevant Pedagogy in Mathematics: A Critical Need',
+    subtitle: 'Culturally Relevant Pedagogy',
     type: 'assignment',
     outcomeIds: ['clo-4'],
+    images: [
+      {
+        src: '/artifacts/crp-math-1.png',
+        alt: 'A speaker on stage with one index finger raised and the other hand open, from a talk on culturally relevant pedagogy in mathematics.',
+      },
+      {
+        src: '/artifacts/crp-math-2.png',
+        alt: 'A speaker on stage holding up one finger on one hand and five fingers on the other.',
+      },
+      {
+        src: '/artifacts/crp-math-3.png',
+        alt: 'A speaker on stage giving a thumbs-up with one hand and holding the other hand open.',
+      },
+      {
+        src: '/artifacts/crp-math-4.png',
+        alt: 'A speaker on stage holding up three fingers on each hand.',
+      },
+    ],
   }),
   placeholderArtifact({
     id: 'culturally-responsive-caring',
