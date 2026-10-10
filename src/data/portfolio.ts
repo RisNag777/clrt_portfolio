@@ -227,9 +227,24 @@ Reference - [1] Tara J. Yosso (2005) Whose culture has capital? A critical race 
   }),
   placeholderArtifact({
     id: 'monolingual-white-children-discourse',
-    title: 'Flores (2015) Monolingual White Children',
+    title: 'Monolingual White Children',
     type: 'reading',
     outcomeIds: ['clo-3'],
+    caption: {
+      outcomeAddressed: 'This artifact addresses CLO 3.',
+      whatILearned: `When I first read this article [1], I did not recognize it as satire. I thought it was a real push to train bilingual children and families. I did find the idea of a "word pedometer" absurd, but it was only during the discussions in class that it struck me that this was a satirical piece and that these activities were being pushed by schools onto families of color to "better integrate them into American society".
+
+In my circumstance, the satire may have been hard to see, because, despite being Indian and being a proud Kannadiga (person from my state of Karnataka), I was brought up multilingual with the most focus, even at home, given to English. My father worked in tech, where he spoke in English all the time and he was certain that if his children were ever going to make it big in the modern world, they needed to be able to speak English so fluently that it wasn't at all a challenge. I think my father did the right thing because it was a personal choice that he and my mother made. My school didn't force it upon them.
+
+The US education system takes that freedom of choice away from families and tries to force English not just on their children but also on their home lives. Home is a place where people can rest, relax and unabashedly be themselves and celebrate their own culture and community. It is absurd to try to push them to speak English, an unfamiliar language, in the place where they have the least incentive to do so.
+
+As a math teacher, my job is to encourage my students to understand the concepts I am presenting to them in any language. Math is a universal language and I will do my best to make sure that a language barrier will not impact my students negatively. This is something I have seen in my field week as well where the Spanish speakers might not volunteer answers as readily as their English speaking counterparts but their answers are correct! They just lack the ability to share their work with the class. This is a barrier I will strive to break down and make it so that students can share out their work in their language of choosing. It is my duty to ensure that their thoughts are translated for everyone else to understand as well.
+
+Reference:
+[1] Flores, N. (2015, July 6). What if we talked about monolingual White children the way we talk about low-income children of color? The Educational Linguist.`,
+      citations: [],
+      whatItShows: '',
+    },
     images: [
       {
         src: '/artifacts/flores-2015-monolingual-white-children.png',
