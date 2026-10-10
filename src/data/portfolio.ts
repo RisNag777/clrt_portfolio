@@ -198,6 +198,22 @@ Coming back to the lesson, after 30 mins, Dr. Von Esch took pity on us and switc
     type: 'assignment',
     outcomeIds: ['clo-2'],
     stackImages: true,
+    caption: {
+      outcomeAddressed: 'This artifact addresses CLO 2.',
+      whatILearned: `I greatly appreciated Yosso's descriptions of cultural wealth [1]. She spoke about how minority students and families are seen as "at fault" for poor academic performance because of a deficit-based mindset of how those cultures are viewed. Schools would traditionally attempt to replace students' traditional cultural beliefs with norms valued by the dominant society.
+
+There is the belief in American society that some communities are culturally wealthy while others are culturally poor. Looking at culture through a lens of Critical Race Theory shows that each community nurtures cultural wealth through at least 6 forms of capital - aspirational, navigational, social, linguistic, familial, and resistant.
+
+For my Lotería cards, I would have loved to devote one card to each form of capital, but I was restricted to only picking one. So, I chose to go with Social Capital. Yosso defined Social Capital as networks of people and community resources that can provide instrumental and emotional support to navigate through society's institutions.
+
+For me, this was something I experienced when I first came to the US. I had my aunt who lived in neighboring Ohio, but I knew nobody in the entire state of Indiana. This turned out to not be unique to me. It became apparent that my entire cohort was filled with Indians looking for their support system. We slowly grew into a large Indian community in Bloomington, IN and all of us relied on and supported each other through the next 2 years. This is why my Lotería card shows the map of Indiana with an Indian flag blooming out of Bloomington.
+
+Reading the Yosso chapter made me realize that I am part of a global community of immigrants to the US. I can talk to students about my experiences in the US and how I navigated various hurdles and crossed many milestones. I can show them that their cultures have value by incorporating them into my lessons and by celebrating their community's wins on the global stage.
+
+Reference - [1] Tara J. Yosso (2005) Whose culture has capital? A critical race theory discussion of community cultural wealth, Race Ethnicity and Education, 8:1, 69-91, DOI: 10.1080/1361332052000341006`,
+      citations: [],
+      whatItShows: '',
+    },
     images: [
       {
         src: '/artifacts/social-capital-indiana.png',
