@@ -18,7 +18,6 @@ export interface Artifact {
   title: string
   type: ArtifactType
   outcomeIds: string[]
-  summary: string
   /** Path under /public, e.g. /artifacts/my-file.pdf — leave empty until you add a file */
   filePath: string
   fileLabel: string
@@ -109,7 +108,6 @@ function placeholderArtifact(input: {
   title: string
   type: ArtifactType
   outcomeIds: string[]
-  summary?: string
   images?: ArtifactImage[]
 }): Artifact {
   const outcomes = input.outcomeIds
@@ -126,9 +124,6 @@ function placeholderArtifact(input: {
     title: input.title,
     type: input.type,
     outcomeIds: input.outcomeIds,
-    summary:
-      input.summary ??
-      `Placeholder artifact for “${input.title}.” Replace this summary and add your file and caption before submitting.`,
     filePath: '',
     fileLabel: 'Add your artifact file to /public/artifacts/',
     images: input.images,
@@ -150,8 +145,6 @@ export const artifacts: Artifact[] = [
     title: 'Los marcos de referencia/Frames of Reference',
     type: 'activity',
     outcomeIds: ['clo-1', 'clo-5'],
-    summary:
-      'A bilingual frames-of-reference activity: reading and responding to identity prompts in Spanish and English.',
     images: [
       {
         src: '/artifacts/frames-of-reference-4.png',

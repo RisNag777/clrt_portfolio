@@ -26,7 +26,7 @@ All portfolio content lives in one file:
 
 1. Add your file under `public/artifacts/` (PDF, image, etc.).
 2. In `artifacts`, set:
-   - `title`, `type`, `summary`
+   - `title`, `type`
    - `outcomeIds` — e.g. `['clo-1']` (see `learningOutcomes` in the same file)
    - `filePath` — e.g. `'/artifacts/my-discussion.pdf'`
    - `fileLabel` — link text shown on the detail page
