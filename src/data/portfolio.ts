@@ -172,41 +172,16 @@ export const artifacts: Artifact[] = [
     ],
   }),
   placeholderArtifact({
-    id: 'nice-white-parents',
-    title: 'Nice White Parents',
-    type: 'discussion',
-    outcomeIds: ['clo-2', 'clo-3'],
-  }),
-  placeholderArtifact({
-    id: 'nieto-principles-of-learning',
-    title: "Nieto's Principles of Learning",
-    type: 'assignment',
-    outcomeIds: ['clo-1', 'clo-4'],
-  }),
-  placeholderArtifact({
-    id: 'diversity-toss',
-    title: 'Diversity Toss',
-    type: 'activity',
-    outcomeIds: ['clo-1', 'clo-2'],
-  }),
-  placeholderArtifact({
-    id: 'socratic-seminar-culture',
-    title: 'Socratic Seminar about culture',
-    type: 'discussion',
-    outcomeIds: ['clo-1', 'clo-3'],
-  }),
-  placeholderArtifact({
     id: 'monolingual-white-children-discourse',
-    title:
-      'Talking about Monolingual white children the way we talk about low-income children of color',
+    title: 'Flores (2015) Monolingual White Children',
     type: 'discussion',
     outcomeIds: ['clo-2', 'clo-3'],
-  }),
-  placeholderArtifact({
-    id: 'bronfenbrenner-model',
-    title: "Bronfenbrenner's Model",
-    type: 'assignment',
-    outcomeIds: ['clo-1'],
+    images: [
+      {
+        src: '/artifacts/flores-2015-monolingual-white-children.png',
+        alt: 'Essay by Dr. Nelson Flores that describes monolingual White children using the same deficit language often applied to low-income children of color, including the Multilingual Talks project.',
+      },
+    ],
   }),
   placeholderArtifact({
     id: 'yosso-communities-of-cultural-wealth',
@@ -225,12 +200,6 @@ export const artifacts: Artifact[] = [
         alt: 'Handwritten notes titled Social Capital describing Yosso’s cultural capital and a personal example of community support in Bloomington, Indiana.',
       },
     ],
-  }),
-  placeholderArtifact({
-    id: 'culturally-responsive-pedagogy',
-    title: 'Culturally Responsive Pedagogy',
-    type: 'assignment',
-    outcomeIds: ['clo-4'],
   }),
   placeholderArtifact({
     id: 'culturally-relevant-pedagogy',
@@ -258,42 +227,6 @@ export const artifacts: Artifact[] = [
     ],
   }),
   placeholderArtifact({
-    id: 'culturally-responsive-caring',
-    title: 'Culturally Responsive Caring (Every kid needs a champion)',
-    type: 'reflection',
-    outcomeIds: ['clo-2', 'clo-4'],
-  }),
-  placeholderArtifact({
-    id: 'child-of-immigrants',
-    title: 'Child of immigrants',
-    type: 'reflection',
-    outcomeIds: ['clo-1', 'clo-3'],
-  }),
-  placeholderArtifact({
-    id: 'socratic-seminar-hidden-brain',
-    title: 'Socratic Seminar about Hidden Brain Podcast',
-    type: 'discussion',
-    outcomeIds: ['clo-1', 'clo-3'],
-  }),
-  placeholderArtifact({
-    id: 'fact-or-fallacy',
-    title: 'Fact or Fallacy',
-    type: 'activity',
-    outcomeIds: ['clo-5', 'clo-6'],
-  }),
-  placeholderArtifact({
-    id: 'second-language-acquisition',
-    title: 'Second Language Acquisition',
-    type: 'assignment',
-    outcomeIds: ['clo-5'],
-  }),
-  placeholderArtifact({
-    id: 'translanguaging',
-    title: 'Translanguaging',
-    type: 'assignment',
-    outcomeIds: ['clo-5', 'clo-6'],
-  }),
-  placeholderArtifact({
     id: 'dialects-are-languages',
     title: 'Dr. Jamila Lyiscott: 3 Ways to Speak English',
     subtitle: 'Dialects are Languages',
@@ -318,18 +251,6 @@ export const artifacts: Artifact[] = [
         alt: 'Handwritten notes numbered 1 through 6 on scaffolding language learning, including multiculturalism, conversational versus academic language, context, student strengths, and English learners.',
       },
     ],
-  }),
-  placeholderArtifact({
-    id: 'key-principles-bilingual-students',
-    title: 'Key Principles for instructing bilingual students',
-    type: 'assignment',
-    outcomeIds: ['clo-5'],
-  }),
-  placeholderArtifact({
-    id: 'loteria-cards',
-    title: 'Loteria Cards',
-    type: 'activity',
-    outcomeIds: ['clo-1', 'clo-4'],
   }),
 ]
 
