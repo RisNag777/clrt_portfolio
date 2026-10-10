@@ -16,6 +16,7 @@ export interface ArtifactImage {
 export interface Artifact {
   id: string
   title: string
+  subtitle?: string
   type: ArtifactType
   outcomeIds: string[]
   /** Path under /public, e.g. /artifacts/my-file.pdf — leave empty until you add a file */
@@ -106,6 +107,7 @@ function plainOutcomeText(text: string) {
 function placeholderArtifact(input: {
   id: string
   title: string
+  subtitle?: string
   type: ArtifactType
   outcomeIds: string[]
   images?: ArtifactImage[]
@@ -122,6 +124,7 @@ function placeholderArtifact(input: {
   return {
     id: input.id,
     title: input.title,
+    subtitle: input.subtitle,
     type: input.type,
     outcomeIds: input.outcomeIds,
     filePath: '',
@@ -143,6 +146,7 @@ export const artifacts: Artifact[] = [
   placeholderArtifact({
     id: 'starting-in-spanish',
     title: 'Los marcos de referencia/Frames of Reference',
+    subtitle: 'Starting in Spanish Activity',
     type: 'activity',
     outcomeIds: ['clo-1', 'clo-5'],
     images: [

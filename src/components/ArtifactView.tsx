@@ -101,6 +101,11 @@ export function ArtifactView({
           <TitleTag className={showBackLink ? 'page-header__title' : 'artifact-entry__title'}>
             {artifact.title}
           </TitleTag>
+          {artifact.subtitle ? (
+            <p className={showBackLink ? 'page-header__lede' : 'artifact-entry__subtitle'}>
+              {artifact.subtitle}
+            </p>
+          ) : null}
         </header>
 
         <section className="caption-block" aria-labelledby={`${artifact.id}-caption`}>
