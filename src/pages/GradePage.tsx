@@ -53,7 +53,9 @@ export function GradePage() {
         <h2 className="section__title" id="reflection-heading">
           Grade reflection
         </h2>
-        <div className="grade-panel">
+        <div
+          className={`grade-panel${gradeReflection.imagePath ? ' grade-panel--with-image' : ''}`}
+        >
           {gradeReflection.isPlaceholder ? (
             <span className="placeholder-note">Placeholder — replace before submission</span>
           ) : null}
@@ -61,7 +63,16 @@ export function GradePage() {
             Proposed grade
           </p>
           <p className="grade-panel__mark">{gradeReflection.proposedGrade}</p>
-          <p>{gradeReflection.reflection}</p>
+          <div className="grade-panel__body">
+            <p>{gradeReflection.reflection}</p>
+            {gradeReflection.imagePath ? (
+              <img
+                className="grade-panel__image"
+                src={gradeReflection.imagePath}
+                alt={gradeReflection.imageAlt ?? ''}
+              />
+            ) : null}
+          </div>
         </div>
       </section>
     </div>
