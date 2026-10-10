@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { Link } from 'react-router-dom'
-import { artifactTypeLabels, artifacts, outcomesForArtifact, type Artifact } from '../data/portfolio'
+import { artifactTypeLabels, outcomesForArtifact, type Artifact } from '../data/portfolio'
 import { RichText } from './RichText'
 
 function CaptionParagraphs({ text }: { text: string }) {
@@ -19,8 +19,6 @@ export function ArtifactView({
   showBackLink?: boolean
 }) {
   const outcomes = outcomesForArtifact(artifact)
-  const number = artifacts.findIndex((item) => item.id === artifact.id) + 1
-  const imageSide = number % 2 === 0 ? 'left' : 'right'
   const TitleTag = showBackLink ? 'h1' : 'h2'
   const [zoomed, setZoomed] = useState<{ src: string; alt: string } | null>(null)
 
@@ -35,10 +33,11 @@ export function ArtifactView({
 
   return (
     <article
-      className={[
-        showBackLink ? 'artifact-detail' : 'artifact-entry',
-        `artifact-entry--image-${imageSide}`,
-      ].join(' ')}
+      className={
+        showBackLink
+          ? 'artifact-detail artifact-entry--image-right'
+          : 'artifact-entry artifact-entry--image-right'
+      }
       id={artifact.id}
     >
       <div className="artifact-entry__copy">
