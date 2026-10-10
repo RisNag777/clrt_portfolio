@@ -37,7 +37,7 @@ export function ArtifactView({
   }
 
   const media = hasImages ? (
-    <div className="artifact-gallery">
+    <div className={`artifact-gallery${artifact.stackImages ? ' artifact-gallery--stack' : ''}`}>
       {artifact.images?.map((image) => (
         <button
           key={image.src}

@@ -688,7 +688,8 @@ p:last-child {
   gap: 1.25rem;
 }
 
-.artifact-gallery:has(> :only-child) {
+.artifact-gallery:has(> :only-child),
+.artifact-gallery--stack {
   grid-template-columns: 1fr;
 }
 

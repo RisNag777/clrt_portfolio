@@ -23,6 +23,7 @@ export interface Artifact {
   filePath: string
   fileLabel: string
   images?: ArtifactImage[]
+  stackImages?: boolean
   caption: {
     outcomeAddressed: string
     whatILearned: string
@@ -111,6 +112,7 @@ function placeholderArtifact(input: {
   type: ArtifactType
   outcomeIds: string[]
   images?: ArtifactImage[]
+  stackImages?: boolean
 }): Artifact {
   const outcomes = input.outcomeIds
     .map((id) => learningOutcomes.find((o) => o.id === id))
@@ -130,6 +132,7 @@ function placeholderArtifact(input: {
     filePath: '',
     fileLabel: 'Add your artifact file to /public/artifacts/',
     images: input.images,
+    stackImages: input.stackImages,
     caption: {
       outcomeAddressed: `This artifact addresses ${cloList}. ${outcomeStatements}`,
       whatILearned: `[Replace this paragraph] Describe what you learned through “${input.title}” and why this is important in the teaching and learning of culturally and linguistically diverse students.`,
@@ -207,9 +210,21 @@ export const artifacts: Artifact[] = [
   }),
   placeholderArtifact({
     id: 'yosso-communities-of-cultural-wealth',
-    title: "Yosso's Communities of Cultural Wealth (Kamehameha Schools)",
+    title: 'Social Capital Lotería Card',
+    subtitle: "Yosso's Communities of Cultural Wealth",
     type: 'assignment',
     outcomeIds: ['clo-2', 'clo-4'],
+    stackImages: true,
+    images: [
+      {
+        src: '/artifacts/social-capital-indiana.png',
+        alt: 'A lotería-style card of the state of Indiana in gray on a red background, with the Indian flag placed in the center.',
+      },
+      {
+        src: '/artifacts/social-capital-notes.png',
+        alt: 'Handwritten notes titled Social Capital describing Yosso’s cultural capital and a personal example of community support in Bloomington, Indiana.',
+      },
+    ],
   }),
   placeholderArtifact({
     id: 'culturally-responsive-pedagogy',
