@@ -267,9 +267,16 @@ export const artifacts: Artifact[] = [
   }),
   placeholderArtifact({
     id: 'scaffolding-language-learning',
-    title: 'Scaffolding language Learning',
+    title: 'Scaffolding Write-and-Pass Activity',
+    subtitle: 'Scaffolding Language Learning',
     type: 'activity',
     outcomeIds: ['clo-5'],
+    images: [
+      {
+        src: '/artifacts/scaffolding-write-and-pass.png',
+        alt: 'Handwritten notes numbered 1 through 6 on scaffolding language learning, including multiculturalism, conversational versus academic language, context, student strengths, and English learners.',
+      },
+    ],
   }),
   placeholderArtifact({
     id: 'key-principles-bilingual-students',
