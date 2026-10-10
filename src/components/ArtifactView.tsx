@@ -4,10 +4,6 @@ import { Link } from 'react-router-dom'
 import { artifactTypeLabels, artifacts, outcomesForArtifact, type Artifact } from '../data/portfolio'
 import { RichText } from './RichText'
 
-function isImagePath(path: string) {
-  return /\.(png|jpe?g|gif|webp|svg)$/i.test(path)
-}
-
 export function ArtifactView({
   artifact,
   showBackLink = false,
@@ -16,10 +12,8 @@ export function ArtifactView({
   showBackLink?: boolean
 }) {
   const outcomes = outcomesForArtifact(artifact)
-  const hasFile = Boolean(artifact.filePath)
-  const hasImages = Boolean(artifact.images?.length)
   const number = artifacts.findIndex((item) => item.id === artifact.id) + 1
-  const imageSide = hasImages && number > 0 ? (number % 2 === 0 ? 'left' : 'right') : null
+  const imageSide = number % 2 === 0 ? 'left' : 'right'
   const TitleTag = showBackLink ? 'h1' : 'h2'
   const [zoomed, setZoomed] = useState<{ src: string; alt: string } | null>(null)
 
@@ -32,55 +26,12 @@ export function ArtifactView({
     return () => window.removeEventListener('keydown', onKey)
   }, [zoomed])
 
-  function openZoom(src: string, alt: string) {
-    setZoomed({ src, alt })
-  }
-
-  const media = hasImages ? (
-    <div className={`artifact-gallery${artifact.stackImages ? ' artifact-gallery--stack' : ''}`}>
-      {artifact.images?.map((image) => (
-        <button
-          key={image.src}
-          type="button"
-          className="artifact-zoom-trigger"
-          onClick={() => openZoom(image.src, image.alt)}
-        >
-          <img src={image.src} alt={image.alt} />
-        </button>
-      ))}
-    </div>
-  ) : hasFile ? (
-    <>
-            {isImagePath(artifact.filePath) ? (
-              <button
-                type="button"
-                className="artifact-zoom-trigger"
-                onClick={() => openZoom(artifact.filePath, `Preview of ${artifact.title}`)}
-              >
-                <img src={artifact.filePath} alt={`Preview of ${artifact.title}`} />
-              </button>
-            ) : null}
-      <p style={{ marginTop: isImagePath(artifact.filePath) ? '1rem' : 0 }}>
-        <a href={artifact.filePath} target="_blank" rel="noreferrer">
-          {artifact.fileLabel || 'Open artifact file'}
-        </a>
-      </p>
-    </>
-  ) : (
-    <p className="artifact-panel__empty">
-      {artifact.fileLabel} Set <code>filePath</code> in <code>src/data/portfolio.ts</code> once your
-      file is ready (for example <code>/artifacts/my-assignment.pdf</code>).
-    </p>
-  )
-
   return (
     <article
       className={[
         showBackLink ? 'artifact-detail' : 'artifact-entry',
-        imageSide ? `artifact-entry--image-${imageSide}` : '',
-      ]
-        .filter(Boolean)
-        .join(' ')}
+        `artifact-entry--image-${imageSide}`,
+      ].join(' ')}
       id={artifact.id}
     >
       <div className="artifact-entry__copy">
@@ -159,14 +110,20 @@ export function ArtifactView({
         </section>
       </div>
 
-      {imageSide ? <div className="artifact-entry__media">{media}</div> : (
-        <section className="artifact-panel" aria-labelledby={`${artifact.id}-file`}>
-          <h3 className="artifact-panel__label" id={`${artifact.id}-file`}>
-            Artifact
-          </h3>
-          {media}
-        </section>
-      )}
+      <div className="artifact-entry__media">
+        <div className={`artifact-gallery${artifact.stackImages ? ' artifact-gallery--stack' : ''}`}>
+          {artifact.images.map((image) => (
+            <button
+              key={image.src}
+              type="button"
+              className="artifact-zoom-trigger"
+              onClick={() => setZoomed({ src: image.src, alt: image.alt })}
+            >
+              <img src={image.src} alt={image.alt} />
+            </button>
+          ))}
+        </div>
+      </div>
 
       {zoomed
         ? createPortal(

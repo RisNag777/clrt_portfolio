@@ -1,16 +1,8 @@
-export type ArtifactType =
-  | 'assignment'
-  | 'discussion'
-  | 'activity'
-  | 'reflection'
-  | 'reading'
-  | 'in-class-video'
+export type ArtifactType = 'assignment' | 'activity' | 'reading' | 'in-class-video'
 
 export const artifactTypeLabels: Record<ArtifactType, string> = {
   assignment: 'Assignment',
-  discussion: 'Discussion',
   activity: 'Activity',
-  reflection: 'Reflection',
   reading: 'Reading',
   'in-class-video': 'In-Class Video',
 }
@@ -34,10 +26,7 @@ export interface Artifact {
   subtitle?: string
   type: ArtifactType
   outcomeIds: string[]
-  /** Path under /public, e.g. /artifacts/my-file.pdf — leave empty until you add a file */
-  filePath: string
-  fileLabel: string
-  images?: ArtifactImage[]
+  images: ArtifactImage[]
   stackImages?: boolean
   caption: {
     outcomeAddressed: string
@@ -126,7 +115,7 @@ function placeholderArtifact(input: {
   subtitle?: string
   type: ArtifactType
   outcomeIds: string[]
-  images?: ArtifactImage[]
+  images: ArtifactImage[]
   stackImages?: boolean
 }): Artifact {
   const outcomes = input.outcomeIds
@@ -144,8 +133,6 @@ function placeholderArtifact(input: {
     subtitle: input.subtitle,
     type: input.type,
     outcomeIds: input.outcomeIds,
-    filePath: '',
-    fileLabel: 'Add your artifact file to /public/artifacts/',
     images: input.images,
     stackImages: input.stackImages,
     caption: {
@@ -359,7 +346,7 @@ export const courseRubric: RubricLevel[] = [
   },
 ]
 
-export function getOutcomeById(id: string): LearningOutcome | undefined {
+function getOutcomeById(id: string): LearningOutcome | undefined {
   return learningOutcomes.find((o) => o.id === id)
 }
 

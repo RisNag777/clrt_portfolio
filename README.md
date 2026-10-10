@@ -24,17 +24,16 @@ All portfolio content lives in one file:
 
 ### Artifacts
 
-1. Add your file under `public/artifacts/` (PDF, image, etc.).
+1. Add photos under `public/artifacts/`.
 2. In `artifacts`, set:
-   - `title`, `type`
+   - `title`, `subtitle`, `type`
    - `outcomeIds` — e.g. `['clo-1']` (see `learningOutcomes` in the same file)
-   - `filePath` — e.g. `'/artifacts/my-discussion.pdf'`
-   - `fileLabel` — link text shown on the detail page
+   - `images` — `{ src, alt }` entries; set `stackImages: true` to show them in one column
    - `caption.outcomeAddressed`, `caption.whatILearned`, `caption.citations`, `caption.whatItShows`
 
 Replace every `[Replace …]` string before submitting.
 
-To add a 7th artifact, append another object to the `artifacts` array.
+Append another object to the `artifacts` array to add an artifact. The list is ordered by course learning outcome.
 
 ### Grade reflection
 
