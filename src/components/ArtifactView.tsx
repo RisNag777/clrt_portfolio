@@ -93,8 +93,18 @@ export function ArtifactView({
           <div className="artifact-detail__meta">
             <span className="tag">{artifact.type}</span>
             {outcomes.map((outcome) => (
-              <span key={outcome.id} className="tag tag--outcome">
-                CLO {outcome.number}
+              <span key={outcome.id} className="clo-preview">
+                <button type="button" className="tag tag--outcome clo-preview__trigger">
+                  CLO {outcome.number}
+                </button>
+                <span className="clo-preview__card" role="tooltip">
+                  {outcome.imagePath ? (
+                    <img src={outcome.imagePath} alt={outcome.imageAlt ?? ''} />
+                  ) : null}
+                  <p>
+                    <RichText text={outcome.text} />
+                  </p>
+                </span>
               </span>
             ))}
           </div>
