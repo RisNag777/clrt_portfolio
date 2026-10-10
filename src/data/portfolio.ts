@@ -276,9 +276,16 @@ export const artifacts: Artifact[] = [
   }),
   placeholderArtifact({
     id: 'dialects-are-languages',
-    title: 'Dialects are Languages',
+    title: 'Dr. Jamila Lyiscott: 3 Ways to Speak English',
+    subtitle: 'Dialects are Languages',
     type: 'discussion',
     outcomeIds: ['clo-6'],
+    images: [
+      {
+        src: '/artifacts/lyiscott-3-ways-to-speak-english.png',
+        alt: 'Still from Jamila Lyiscott’s TEDSalon NY2014 talk, 3 ways to speak English, February 2014.',
+      },
+    ],
   }),
   placeholderArtifact({
     id: 'scaffolding-language-learning',
