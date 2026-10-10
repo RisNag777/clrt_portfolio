@@ -4,6 +4,13 @@ import { Link } from 'react-router-dom'
 import { artifactTypeLabels, artifacts, outcomesForArtifact, type Artifact } from '../data/portfolio'
 import { RichText } from './RichText'
 
+function CaptionParagraphs({ text }: { text: string }) {
+  return text
+    .split(/\n\n+/)
+    .filter((paragraph) => paragraph.trim())
+    .map((paragraph) => <p key={paragraph}>{paragraph}</p>)
+}
+
 export function ArtifactView({
   artifact,
   showBackLink = false,
@@ -75,7 +82,6 @@ export function ArtifactView({
           </h3>
 
           <div className="caption-section">
-            <h3>Course learning outcome addressed</h3>
             <p>{artifact.caption.outcomeAddressed}</p>
             {outcomes.length > 0 ? (
               <ul>
@@ -89,8 +95,7 @@ export function ArtifactView({
           </div>
 
           <div className="caption-section">
-            <h3>What I learned and why it matters</h3>
-            <p>{artifact.caption.whatILearned}</p>
+            <CaptionParagraphs text={artifact.caption.whatILearned} />
             {artifact.caption.citations.length > 0 ? (
               <>
                 <h3 style={{ marginTop: '1.25rem' }}>Sources cited</h3>
@@ -103,10 +108,12 @@ export function ArtifactView({
             ) : null}
           </div>
 
-          <div className="caption-section">
-            <h3>What this artifact shows about my learning</h3>
-            <p>{artifact.caption.whatItShows}</p>
-          </div>
+          {artifact.caption.whatItShows ? (
+            <div className="caption-section">
+              <h3>What this artifact shows about my learning</h3>
+              <CaptionParagraphs text={artifact.caption.whatItShows} />
+            </div>
+          ) : null}
         </section>
       </div>
 

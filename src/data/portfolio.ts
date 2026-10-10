@@ -117,6 +117,7 @@ function placeholderArtifact(input: {
   outcomeIds: string[]
   images: ArtifactImage[]
   stackImages?: boolean
+  caption?: Partial<Artifact['caption']>
 }): Artifact {
   const outcomes = input.outcomeIds
     .map((id) => learningOutcomes.find((o) => o.id === id))
@@ -136,13 +137,18 @@ function placeholderArtifact(input: {
     images: input.images,
     stackImages: input.stackImages,
     caption: {
-      outcomeAddressed: `This artifact addresses ${cloList}. ${outcomeStatements}`,
-      whatILearned: `[Replace this paragraph] Describe what you learned through “${input.title}” and why this is important in the teaching and learning of culturally and linguistically diverse students.`,
-      citations: [
+      outcomeAddressed:
+        input.caption?.outcomeAddressed ?? `This artifact addresses ${cloList}. ${outcomeStatements}`,
+      whatILearned:
+        input.caption?.whatILearned ??
+        `[Replace this paragraph] Describe what you learned through “${input.title}” and why this is important in the teaching and learning of culturally and linguistically diverse students.`,
+      citations: input.caption?.citations ?? [
         '[Replace] Author, A. (Year). Title. Source.',
         '[Replace] Course reading, video, or class activity title.',
       ],
-      whatItShows: `[Replace this paragraph] Explain what this artifact shows about your learning—e.g., a powerful moment of insight, growth in knowledge/skill/disposition, or a challenge that stretched your thinking.`,
+      whatItShows:
+        input.caption?.whatItShows ??
+        `[Replace this paragraph] Explain what this artifact shows about your learning—e.g., a powerful moment of insight, growth in knowledge/skill/disposition, or a challenge that stretched your thinking.`,
     },
   }
 }
@@ -154,6 +160,18 @@ export const artifacts: Artifact[] = [
     subtitle: 'Starting in Spanish Activity',
     type: 'activity',
     outcomeIds: ['clo-1'],
+    caption: {
+      outcomeAddressed: 'This artifact addresses CLO 1.',
+      whatILearned: `This activity really opened my eyes to the struggles faced by MLL students. It occured before our first field week and it was the first time I considered the extent of unfamiliarity some students might have with the English language.
+
+The first lesson of this course began with Dr. Von Esch talking to us all in Spanish. I remember a lot of us laughing because we thought this was an immersion exercise to introduce the idea of how MLL students might feel with an English speaking teacher in class. However, it didn't end. Instead, she continued speaking Spanish for an uncomfortably long time. I have been learning Spanish on Duolingo since 2024 and I was able to understand most of what Dr. Von Esch was saying but the cognitive load on my mind was exhausting!
+
+When we finally got to the activity, I was frustrated because I was not fluent enough in Spanish to express myself the way I wanted to. I had to write some very rudimentary thoughts that was not a good representation of my knowledge or views. This was a good learning to take into my first field week and my interactions with MLL students. I was able to empathize with them and try my best to support their learning through translating questions and concepts through Google Translate or to the best of my Spanish speaking ability.
+
+Coming back to the lesson, after 30 mins, Dr. Von Esch took pity on us and switched over to English. When we got to re-attempt the activity, I was able to answer thoughtfully and to the best of my ability in English (the language I am most comfortable in by far). I spoke to my mentor teacher during my field week and we agreed to give out quizzes and worksheets with Spanish alternatives and translate the slides we use in class as well. I still believe there is more we can do to support our MLL students but I'm happy with the start I've made towards being more inclusive.`,
+      citations: [],
+      whatItShows: '',
+    },
     images: [
       {
         src: '/artifacts/frames-of-reference-4.png',
