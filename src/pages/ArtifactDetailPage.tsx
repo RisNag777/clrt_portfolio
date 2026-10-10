@@ -39,7 +39,13 @@ export function ArtifactDetailPage() {
         <h2 className="artifact-panel__label" id="artifact-file-heading">
           Artifact
         </h2>
-        {hasFile ? (
+        {artifact.images?.length ? (
+          <div className="artifact-gallery">
+            {artifact.images.map((image) => (
+              <img key={image.src} src={image.src} alt={image.alt} />
+            ))}
+          </div>
+        ) : hasFile ? (
           <>
             {isImagePath(artifact.filePath) ? (
               <img src={artifact.filePath} alt={`Preview of ${artifact.title}`} />

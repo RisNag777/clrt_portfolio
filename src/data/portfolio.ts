@@ -8,6 +8,11 @@ export interface LearningOutcome {
   imageAlt?: string
 }
 
+export interface ArtifactImage {
+  src: string
+  alt: string
+}
+
 export interface Artifact {
   id: string
   title: string
@@ -17,6 +22,7 @@ export interface Artifact {
   /** Path under /public, e.g. /artifacts/my-file.pdf — leave empty until you add a file */
   filePath: string
   fileLabel: string
+  images?: ArtifactImage[]
   caption: {
     outcomeAddressed: string
     whatILearned: string
@@ -104,6 +110,7 @@ function placeholderArtifact(input: {
   type: ArtifactType
   outcomeIds: string[]
   summary?: string
+  images?: ArtifactImage[]
 }): Artifact {
   const outcomes = input.outcomeIds
     .map((id) => learningOutcomes.find((o) => o.id === id))
@@ -124,6 +131,7 @@ function placeholderArtifact(input: {
       `Placeholder artifact for “${input.title}.” Replace this summary and add your file and caption before submitting.`,
     filePath: '',
     fileLabel: 'Add your artifact file to /public/artifacts/',
+    images: input.images,
     caption: {
       outcomeAddressed: `This artifact addresses ${cloList}. ${outcomeStatements}`,
       whatILearned: `[Replace this paragraph] Describe what you learned through “${input.title}” and why this is important in the teaching and learning of culturally and linguistically diverse students.`,
@@ -139,9 +147,29 @@ function placeholderArtifact(input: {
 export const artifacts: Artifact[] = [
   placeholderArtifact({
     id: 'starting-in-spanish',
-    title: 'Starting in Spanish activity',
+    title: 'Los marcos de referencia/Frames of Reference',
     type: 'activity',
     outcomeIds: ['clo-1', 'clo-5'],
+    summary:
+      'A bilingual frames-of-reference activity: reading and responding to identity prompts in Spanish and English.',
+    images: [
+      {
+        src: '/artifacts/frames-of-reference-4.png',
+        alt: 'Spanish handout titled Los marcos de referencia explaining the purposes of the frames-of-reference exercise.',
+      },
+      {
+        src: '/artifacts/frames-of-reference-1.png',
+        alt: 'Spanish frames-of-reference worksheet with handwritten notes on religion, race and ethnicity, gender, and sexuality.',
+      },
+      {
+        src: '/artifacts/frames-of-reference-3.png',
+        alt: 'English Frames of Reference handout with handwritten notes on family and place.',
+      },
+      {
+        src: '/artifacts/frames-of-reference-2.png',
+        alt: 'English frames-of-reference worksheet with handwritten notes on social class and religion.',
+      },
+    ],
   }),
   placeholderArtifact({
     id: 'nice-white-parents',

@@ -619,6 +619,20 @@ p:last-child {
   font-style: italic;
 }
 
+.artifact-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.artifact-gallery img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+}
+
 .caption-block {
   display: grid;
   gap: 1.75rem;
@@ -791,6 +805,10 @@ p:last-child {
 }
 
 @media (max-width: 640px) {
+  .artifact-gallery {
+    grid-template-columns: 1fr;
+  }
+
   .site-nav__links {
     gap: 0.25rem 0.85rem;
     font-size: 0.92rem;
