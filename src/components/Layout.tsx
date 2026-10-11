@@ -1,9 +1,21 @@
-import { NavLink, Outlet } from 'react-router-dom'
+import { useEffect } from 'react'
+import { NavLink, Outlet, useLocation } from 'react-router-dom'
 import { course } from '../data/portfolio'
+
+function ScrollToTop() {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+
+  return null
+}
 
 export function Layout() {
   return (
     <>
+      <ScrollToTop />
       <header className="site-nav">
         <div className="container site-nav__inner">
           <NavLink to="/" className="site-nav__brand" end>
