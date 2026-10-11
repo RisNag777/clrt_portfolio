@@ -306,6 +306,20 @@ References
     subtitle: 'Scaffolding Language Learning',
     type: 'activity',
     outcomeIds: ['clo-5'],
+    caption: {
+      outcomeAddressed: 'This artifact addresses CLO 5.',
+      whatILearned: `Gibbons [1] argues that teachers should maintain a classroom with high expectations where subject-area content, academic language, and higher-order thinking are integrated through strategic scaffolding. I love the choir example because it clearly shows how holding people to high standards can push them to rise above and achieve more than even they thought possible. However, holding the class to high standards requires teachers to not focus on what MLL students lack. The idea must be to treat them as capable thinkers. Rather than making things easier for MLL students, teachers must simplify the route to understanding through responsive scaffolding whether through graphic organizers, sentence starters, peer dialogue, or structured language models.
+
+I really liked the Write-and-Pass activity as a different way of engaging in a group discussion with my peers. It brought out the different things that each of us picked out as the most important and also made us dig deeper into the text so as to come up with different observations which allowed us to look back at the text with a greater understanding. We spoke about how we need to overcome false senses of superiority based on language and reject a deficit-based mindset, and understand that conversational proficiency is not the same as academic proficiency.
+
+I have implemented some of these scaffolding techniques in my field weeks so far. I don't let my MLL students sit out activities because they don't understand the text. I give them sentence starters for discussions that give them the language to work through the activity. This helps them realize that the problem is something that they are able to solve and that they already have the tools they need to succeed!
+
+References
+
+[1] - <a href="https://victesol.vic.edu.au/wp-content/uploads/gibbonschapter.pdf">Gibbons, P. (2015). Scaffolding language, scaffolding learning: Teaching English language learners in the mainstream classroom (2nd ed.). Heinemann.</a>`,
+      citations: [],
+      whatItShows: '',
+    },
     images: [
       {
         src: '/artifacts/scaffolding-write-and-pass.png',
