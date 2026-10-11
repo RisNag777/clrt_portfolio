@@ -679,6 +679,11 @@ button.clo-preview__trigger {
   grid-template-columns: 1fr;
 }
 
+.artifact-gallery--stack {
+  width: 80%;
+  margin-left: auto;
+}
+
 .artifact-gallery img {
   width: 100%;
   height: auto;
