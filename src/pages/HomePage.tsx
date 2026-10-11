@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { RichText } from '../components/RichText'
 import { course, learningOutcomes } from '../data/portfolio'
+import { publicUrl } from '../publicUrl'
 import { useReveal } from '../hooks/useReveal'
 
 export function HomePage() {
@@ -32,7 +33,7 @@ export function HomePage() {
           </div>
           <img
             className="hero__image"
-            src="/images/community-hands-tree.png"
+            src={publicUrl('/images/community-hands-tree.png')}
             alt="A colorful illustration of a tree where the trunk is a wood-textured hand and the leaves are many diverse, multicolored handprints, symbolizing community and inclusive education."
           />
         </div>
@@ -75,7 +76,7 @@ export function HomePage() {
                   {outcome.imagePath ? (
                     <img
                       className="outcome-item__image"
-                      src={outcome.imagePath}
+                      src={publicUrl(outcome.imagePath)}
                       alt={outcome.imageAlt ?? ''}
                     />
                   ) : null}

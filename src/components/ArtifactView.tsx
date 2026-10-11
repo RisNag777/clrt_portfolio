@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { Link } from 'react-router-dom'
 import { artifactTypeLabels, outcomesForArtifact, type Artifact } from '../data/portfolio'
+import { publicUrl } from '../publicUrl'
 import { RichText } from './RichText'
 
 function CaptionParagraphs({ text }: { text: string }) {
@@ -60,7 +61,7 @@ export function ArtifactView({
                 </button>
                 <span className="clo-preview__card" role="tooltip">
                   {outcome.imagePath ? (
-                    <img src={outcome.imagePath} alt={outcome.imageAlt ?? ''} />
+                    <img src={publicUrl(outcome.imagePath)} alt={outcome.imageAlt ?? ''} />
                   ) : null}
                   <p>
                     <RichText text={outcome.text} />
@@ -127,9 +128,9 @@ export function ArtifactView({
               key={image.src}
               type="button"
               className="artifact-zoom-trigger"
-              onClick={() => setZoomed({ src: image.src, alt: image.alt })}
+              onClick={() => setZoomed({ src: publicUrl(image.src), alt: image.alt })}
             >
-              <img src={image.src} alt={image.alt} />
+              <img src={publicUrl(image.src)} alt={image.alt} />
             </button>
           ))}
         </div>

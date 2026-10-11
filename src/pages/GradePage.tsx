@@ -1,4 +1,5 @@
 import { course, courseRubric, gradeReflection } from '../data/portfolio'
+import { publicUrl } from '../publicUrl'
 
 export function GradePage() {
   return (
@@ -68,7 +69,7 @@ export function GradePage() {
             {gradeReflection.imagePath ? (
               <img
                 className="grade-panel__image"
-                src={gradeReflection.imagePath}
+                src={publicUrl(gradeReflection.imagePath)}
                 alt={gradeReflection.imageAlt ?? ''}
               />
             ) : null}

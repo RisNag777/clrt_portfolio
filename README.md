@@ -45,6 +45,8 @@ Edit `gradeReflection` in `portfolio.ts`:
 
 ## Deploy
 
-The site is a static Vite app. After `npm run build`, deploy the `dist/` folder to Vercel, Netlify, or GitHub Pages.
+Pushes to `main` publish the site with GitHub Pages:
 
-For GitHub Pages with a project site URL, set `base` in `vite.config.ts` to your repo name (e.g. `base: '/clrt_portfolio/'`).
+https://risnag777.github.io/clrt_portfolio/
+
+The production build uses `base: '/clrt_portfolio/'`. Local `npm run dev` stays at the site root.
