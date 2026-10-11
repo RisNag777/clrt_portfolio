@@ -230,6 +230,8 @@ References
   placeholderArtifact({
     id: 'monolingual-white-children-discourse',
     title: 'Monolingual White Children',
+    subtitle:
+      'What if we talked about monolingual White children the way we talk about low-income children of color?',
     type: 'reading',
     outcomeIds: ['clo-3'],
     caption: {
