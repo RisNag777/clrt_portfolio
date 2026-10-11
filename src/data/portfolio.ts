@@ -258,6 +258,26 @@ Reference:
     subtitle: 'Culturally Relevant Pedagogy',
     type: 'in-class-video',
     outcomeIds: ['clo-4'],
+    caption: {
+      outcomeAddressed: 'This artifact addresses CLO 4.',
+      whatILearned: `We watched this video as an illustration of Culturally Relevant Pedagogy and I feel that it spoke to me. When I joined this course, I was questioning how a Math teacher could be a social justice educator, especially when compared to a History or ELA or Visual Arts teacher. By the time we got to this video [1] in class, I had a pretty good idea of what my role as a social justice educator would be but this video was a perfect encapsulation of my thoughts.
+
+The example of showing off the number 6 on fingers is so interesting! I know that people show off numbers on their fingers in different ways but I never attributed that to a cultural upbringing. It just makes sense how the way we are brought up can change the way different people do even the most basic things!
+
+Shelly Jones also said that students come to school to learn but the learning doesn't end once they leave the classroom. Culturally Relevant Pedagogy has 3 criteria - 1) Students have academic success, 2) Students have cultural competence 3) Students develop a critical consciousness (empower them to challenge the status quo). Typically schools don't support students from different communities because there is no social context for learning. In the Gay reading [2], she says that the existing strengths and accomplishments of these students should be recognized and further enhanced in the instructional process.
+
+In that vein, I liked the example of using quilts to let the students show off artistic skills and giving them a space to represent themselves. Also, once the quilts were made, they found the area and perimeter of their quilts! Another example presented in the video was about cornrows and how the teacher wanted to ask a student to talk to the class about cornrows but was worried that singling her out was not the way to approach the situation. The teacher instead opened up the question to the whole class and asked if any of the students knew anyone who could come to school to talk about cornrows. The girl who the teacher wanted to reach out to felt safe enough to put herself forward to talk as an expert.
+
+In our discussion groups, we talked a lot about the liquor store example. We all agreed that it was a great way to explore the community of the students and to get them involved in policy by using the data they collected to improve their neighborhood. I believe that all of these examples illuminate the way forward for me. While I had an idea of the type of teacher I wanted to be, this video, and by extension, this class has given me specific ideas to take forward and implement in my future classrooms.
+
+References
+
+[1] - TEDx Talks. (2016, December 21). Culturally relevant pedagogy in mathematics: A critical need | Shelly Jones | TEDxCCSU [Video]. YouTube. https://www.youtube.com/watch?v=EjLOuUhN6xY
+
+[2] - Gay, G. (2018). Culturally responsive teaching: Theory, research, and practice (3rd ed.). Teachers College Press.`,
+      citations: [],
+      whatItShows: '',
+    },
     images: [
       {
         src: '/artifacts/crp-math-1.png',
