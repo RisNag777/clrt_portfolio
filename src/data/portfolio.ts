@@ -212,7 +212,7 @@ Reading the Yosso chapter made me realize that I am part of a global community o
 
 References
 
-[1] - Tara J. Yosso (2005) Whose culture has capital? A critical race theory discussion of community cultural wealth, Race Ethnicity and Education, 8:1, 69-91, DOI: 10.1080/1361332052000341006`,
+[1] - <a href="https://thrive.arizona.edu/sites/default/files/Whose%20culture%20has%20capital_A%20critical%20race%20theory%20discussion%20of%20community%20cultural%20wealth_1.pdf">Tara J. Yosso (2005) Whose culture has capital? A critical race theory discussion of community cultural wealth, Race Ethnicity and Education, 8:1, 69-91, DOI: 10.1080/1361332052000341006</a>`,
       citations: [],
       whatItShows: '',
     },
@@ -244,7 +244,7 @@ As a math teacher, my job is to encourage my students to understand the concepts
 
 References
 
-[1] - Flores, N. (2015, July 6). What if we talked about monolingual White children the way we talk about low-income children of color? The Educational Linguist.`,
+[1] - <a href="https://educationallinguist.wordpress.com/2015/07/06/what-if-we-talked-about-monolingual-white-children-the-way-we-talk-about-low-income-children-of-color/">Flores, N. (2015, July 6). What if we talked about monolingual White children the way we talk about low-income children of color? The Educational Linguist.</a>`,
       citations: [],
       whatItShows: '',
     },
@@ -275,9 +275,9 @@ In our discussion groups, we talked a lot about the liquor store example. We all
 
 References
 
-[1] - TEDx Talks. (2016, December 21). Culturally relevant pedagogy in mathematics: A critical need | Shelly Jones | TEDxCCSU [Video]. YouTube. https://www.youtube.com/watch?v=EjLOuUhN6xY
+[1] - <a href="https://www.youtube.com/watch?v=EjLOuUhN6xY">TEDx Talks. (2016, December 21). Culturally relevant pedagogy in mathematics: A critical need | Shelly Jones | TEDxCCSU [Video]. YouTube.</a>
 
-[2] - Gay, G. (2018). Culturally responsive teaching: Theory, research, and practice (3rd ed.). Teachers College Press.`,
+[2] - <a href="https://www.proquest.com/docview/2134412949/bookReader?accountid=28598&sourcetype=Books">Gay, G. (2018). Culturally responsive teaching: Theory, research, and practice (3rd ed.). Teachers College Press.</a>`,
       citations: [],
       whatItShows: '',
     },

@@ -1,9 +1,9 @@
 import type { ReactNode } from 'react'
 
-/** Renders trusted text with optional <em>…</em> italics. */
+/** Renders trusted text with optional <em> italics and https <a> links. */
 export function RichText({ text }: { text: string }) {
   const parts: ReactNode[] = []
-  const pattern = /<em>(.*?)<\/em>/g
+  const pattern = /<em>([\s\S]*?)<\/em>|<a href="(https?:\/\/[^"]+)">([\s\S]*?)<\/a>/g
   let lastIndex = 0
   let match: RegExpExecArray | null
   let key = 0
@@ -12,7 +12,15 @@ export function RichText({ text }: { text: string }) {
     if (match.index > lastIndex) {
       parts.push(text.slice(lastIndex, match.index))
     }
-    parts.push(<em key={key++}>{match[1]}</em>)
+    if (match[1] !== undefined) {
+      parts.push(<em key={key++}>{match[1]}</em>)
+    } else {
+      parts.push(
+        <a key={key++} href={match[2]} target="_blank" rel="noreferrer">
+          {match[3]}
+        </a>,
+      )
+    }
     lastIndex = match.index + match[0].length
   }
 

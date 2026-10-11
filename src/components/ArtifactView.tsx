@@ -8,7 +8,11 @@ function CaptionParagraphs({ text }: { text: string }) {
   return text
     .split(/\n\n+/)
     .filter((paragraph) => paragraph.trim())
-    .map((paragraph) => <p key={paragraph}>{paragraph}</p>)
+    .map((paragraph) => (
+      <p key={paragraph}>
+        <RichText text={paragraph} />
+      </p>
+    ))
 }
 
 export function ArtifactView({
