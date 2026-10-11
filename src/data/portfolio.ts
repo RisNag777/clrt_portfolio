@@ -210,7 +210,9 @@ For me, this was something I experienced when I first came to the US. I had my a
 
 Reading the Yosso chapter made me realize that I am part of a global community of immigrants to the US. I can talk to students about my experiences in the US and how I navigated various hurdles and crossed many milestones. I can show them that their cultures have value by incorporating them into my lessons and by celebrating their community's wins on the global stage.
 
-Reference - [1] Tara J. Yosso (2005) Whose culture has capital? A critical race theory discussion of community cultural wealth, Race Ethnicity and Education, 8:1, 69-91, DOI: 10.1080/1361332052000341006`,
+References
+
+[1] - Tara J. Yosso (2005) Whose culture has capital? A critical race theory discussion of community cultural wealth, Race Ethnicity and Education, 8:1, 69-91, DOI: 10.1080/1361332052000341006`,
       citations: [],
       whatItShows: '',
     },
@@ -240,8 +242,9 @@ The US education system takes that freedom of choice away from families and trie
 
 As a math teacher, my job is to encourage my students to understand the concepts I am presenting to them. Math is a universal language and I will do my best to make sure that a language barrier will not impact my students negatively. This is something I have seen in my field week as well where the Spanish speakers might not volunteer answers as readily as their English speaking counterparts but their answers are correct. They just lack the ability to share their work with the class. This is a barrier I will strive to break down and make it so that students can share out their work in their language of choosing. It is my duty to ensure that their thoughts are translated for everyone else to understand as well.
 
-Reference:
-[1] Flores, N. (2015, July 6). What if we talked about monolingual White children the way we talk about low-income children of color? The Educational Linguist.`,
+References
+
+[1] - Flores, N. (2015, July 6). What if we talked about monolingual White children the way we talk about low-income children of color? The Educational Linguist.`,
       citations: [],
       whatItShows: '',
     },
