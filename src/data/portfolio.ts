@@ -335,6 +335,20 @@ References
     subtitle: 'Dialects are Languages',
     type: 'in-class-video',
     outcomeIds: ['clo-6'],
+    caption: {
+      outcomeAddressed: 'This artifact addresses CLO 6.',
+      whatILearned: `Jamila Lyiscott [1] talks about how she is trilingual because she has 3 different dialects that she uses in different contexts. This resonates with me because I do the same. I have my American English accent/dialect and my Indian English accent/dialect that comes out depending on the people I am talking to at a given time. My key takeaway from this talk was how different dialects are treated, despite the fact that the language is still English.
+
+In our group discussions, we spoke about why I felt the need to have an American English dialect/accent and it was because when I first came to this country, people didn't take the time to understand what I was saying to them. It sounded unfamiliar so they couldn't or maybe wouldn't understand me. So, I worked to create a dialect/accent that would allow me to communicate with the general public in the USA and it has served me well.
+
+For my future students, this means that I will treat them with the grace and respect that I didn't receive. I will not correct their pronunciation because their pronunciation isn't incorrect. It's informed by their culture. I will try to share material from around the world so students can learn to listen to and understand English spoken by different people. My students should have empathy to be able to understand why someone might sound different to them and they should be able to accept that and not try to correct them.
+
+References
+
+[1] - <a href="https://www.ted.com/talks/jamila_lyiscott_3_ways_to_speak_english">Lyiscott, J. (2014, February). 3 ways to speak English [Video]. TED Conferences.</a>`,
+      citations: [],
+      whatItShows: '',
+    },
     images: [
       {
         src: '/artifacts/lyiscott-3-ways-to-speak-english.png',
